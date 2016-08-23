@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Card</title>
+        <link rel="stylesheet" type="text/css" href="site.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <h1>Coding Dojo Contact Card System</h1>
+            </div>
+
+            <div id="content_left">
+                <h3>Add a Contact Card</h3>
+                <form id="addContactForm">
+                    <input type="text" name="firstName" placeholder="First Name" value="">
+                    <input type="text" name="lastName" placeholder="Last Name" value="">
+                    <textarea id="formTextarea" name="description" placeholder="Write your Contact Description Here!"></textarea>
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+
+            </div>
+
+            <div id="content_main">
+                <!--<div id="contact_card">
+                    <h4>Jason Wilcox</h4>
+                    <h5>Click for Description!</h5>
+                    <p>This is a description of goofy go nutzsos!</p>
+                </div>
+            -->
+            </div>
+
+
+        </div>
+    </body>
+    <script>
+        function setNewCard() {
+            $('#contact_card p').hide();
+        };
+
+
+        $(document).ready(function(){
+
+            $('#addContactForm').submit(function(){
+                console.log("Starting Form Submit");
+
+                var fName = $('input[name="firstName"]').val();
+                var lName = $('input[name="lastName"]').val();
+                var description = $('textarea[name="description"]').val();
+
+                $('#content_main').append('<div id="contact_card" class="cardFront"><h4>' + fName + ' '
+                + lName + '</h4><h5>Click for Description!</h5><p>' + description + '</p></div>');
+                setNewCard();
+
+                return false
+            });
+
+            $(document).on('click','.cardFront', function(){
+                console.log("The .on has been called");
+                $(this).find('h4').hide();
+                $(this).find('h5').hide();
+                $(this).find('p').show();
+                $(this).addClass('cardBack');
+                $(this).removeClass('cardFront');
+            });
+
+            $(document).on('click','.cardBack', function(){
+                $(this).find('h4').show();
+                $(this).find('h5').show();
+                $(this).find('p').hide();
+                $(this).addClass('cardFront');
+                $(this).removeClass('cardBack');
+            })
+
+            $('#contact_card').click(function(){
+
+                $('#contact_card h4, #contact_card h5').hide();
+                $('#contact_card p').show();
+
+            });
+
+
+        });
+    </script>
+
+</html>

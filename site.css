@@ -1,0 +1,97 @@
+/*site.css
+    Authored By Jason Wilcox
+    Coded for Coding Dojo
+
+    */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+h1{
+    color: #001221;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+}
+
+h3{
+    text-align: center;
+    color: #C2A1B5;
+    padding: 30px 0px 0px 0px;
+}
+
+textarea{
+    width: 190px;
+    height: 100px;
+    background: #642E50;
+    margin: 10px 0px 0px 0px;
+    border: 0px none;
+}
+
+form{
+    text-align: center;
+}
+
+input[type=text] {
+    border: 0px none;
+    background: #642E50;
+    margin: 10px 0px 0px 0px;
+}
+
+input[type=submit]{
+    background: #642E50;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #642E50;
+    border-radius: 5px;
+    margin: 20px 0px 0px 0px;
+}
+
+
+#wrapper{
+    width: 920px;
+    margin: 0 auto;
+    background: #074C85;
+}
+
+#header{
+    height: 100px;
+
+}
+
+#content_left{
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 500px;
+    background: #A10065;
+    padding: 0px;
+}
+
+#content_main{
+    display: inline-block;
+    vertical-align: top;
+    width:712px;
+    height: 500px;
+    background: #CE7700;
+}
+
+    #contact_card{
+        background-color: #B0F300;
+        display: inline-block;
+        margin: 30px 0px 0px 20px;
+        text-align: center;
+        width: 200px;
+        height: 100px;
+
+    }
+    #contact_card h4{
+        margin: 10px 0px 20px 0px;
+        padding-top: 15px;
+
+    }
+
+    #contact_card p{
+        padding-top: 20px;
+    }
